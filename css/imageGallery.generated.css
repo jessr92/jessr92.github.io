@@ -1,0 +1,55 @@
+.image-gallery:has(.gallery-radio[value="0"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 0 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="1"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 1 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="2"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 2 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="3"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 3 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="4"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 4 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="5"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 5 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="6"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 6 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="7"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 7 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="8"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 8 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="9"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 9 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="10"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 10 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="11"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 11 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="12"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 12 / var(--slide-count)));
+}
+
+.image-gallery:has(.gallery-radio[value="13"]:checked) .gallery-track {
+    transform: translateX(calc(-100% * 13 / var(--slide-count)));
+}
