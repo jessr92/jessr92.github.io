@@ -1,0 +1,130 @@
+#image-gallery {
+    position: relative;
+    box-sizing: border-box;
+}
+
+#modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: black;
+}
+
+#fullscreen-button {
+    display: none;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#fullscreen-button:hover,
+#fullscreen-button:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#prev-button,
+#next-button {
+    background-color: #8b0000;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    background-color: #b73a7b;
+}
+
+#prev-button,
+#next-button,
+#prev-button:hover,
+#next-button:hover {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#next-button {
+    display: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#prev-button {
+    display: none;
+}
+
+.counter {
+    display: none;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+#caption-container, #exif-container {
+    display: none;
+    text-align: center;
+    background-color: #222;
+    padding: 2px 43px;
+    color: white;
+}
+
+.thumbnails:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.thumbnail-container {
+    display: none;
+    float: left;
+    margin-right: 5px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    opacity: 0.6;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.active,
+.thumbnail:hover {
+    opacity: 1;
+}
+
+#image-gallery .slide {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#modal .slide {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    max-width: 100vw;
+    max-height: 80vh;
+}
+
+#modal .thumbnails {
+    max-height: 10vh;
+}
