@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Baking">
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/imageGallery.css">
+    <title>Gordon Reid - Baking</title>
+  </head>
+  <body>
+    <header>Gordon Reid</header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Coding</a></li>
+        <li><a href="/interests">Interests</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h3>Baking</h3>
+      <p>I like to bake. Content TBD</p>
+      <p>Here are some of the things I have baked.</p>
+      <div id="imageGallery">
+        <div class="slide-container">
+          <div class="counter">1 / 2</div><img class="slide" src="/images/cheesecake.jpg" alt="Cheesecake">
+        </div>
+        <div class="slide-container">
+          <div class="counter">2 / 2</div><img class="slide" src="/images/cookies.jpg" alt="Cookies">
+        </div><a id="prevButton">&#10094;</a><a id="nextButton">&#10095;</a>
+        <div id="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/cheesecake_thumb.jpg" alt="Cheesecake"></div>
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/cookies_thumb.jpg" alt="Cookies"></div>
+        </div>
+      </div>
+      <script src="/js/imageGallery.js"></script>
+    </main>
+  </body>
+</html>
