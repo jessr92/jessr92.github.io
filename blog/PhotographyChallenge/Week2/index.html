@@ -6,6 +6,7 @@
     <meta name="description" content="Week 2 - Something that inspires you">
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/imageGallery.css">
     <title>Gordon Reid - Week 2 - Something that inspires you</title>
   </head>
   <body>
@@ -21,7 +22,24 @@
     <main>
       <h3>Week 2 - Something that inspires you</h3>
       <p>Week 2 of the photography challenge is "Something that inspires you". I really struggled to come up with a subject to take a picture of so instead I'm just going to take one of my favourite pictures that I have taken so far.</p>
-      <p>When some close friends were up to visit, we went to see the highland cows that live a couple of minutes from our house. For the first time in the four years that I've lived there, one of the cows came up to see us and was happy to receive some pets!</p><img class="blog-image" src="/images/blog/photography_challenge_week_2.jpg" alt="The unedited image of myself and Constantine">
+      <p>When some close friends were up to visit, we went to see the highland cows that live a couple of minutes from our house. For the first time in the four years that I've lived there, one of the cows came up to see us and was happy to receive some pets!</p>
+      <div id="image-gallery"><span id="fullscreen-button">⤡</span>
+        <div class="slide-container">
+          <div class="counter">1 / 1</div><img class="slide" src="/images/blog/photography_challenge_week_2.jpg" alt="The unedited image of the highland cow">
+          <p class="no-js-caption">The unedited image of the highland cow</p>
+        </div><a id="prev-button">&#10094;</a><a id="next-button">&#10095;</a>
+        <div id="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div id="exif-container">
+          <p id="exif"></p>
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/blog/photography_challenge_week_2_thumb.jpg" alt="The unedited image of the highland cow"></div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+      <script src="/js/imageGallery.js"></script>
     </main>
   </body>
 </html>

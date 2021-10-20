@@ -6,6 +6,7 @@
     <meta name="description" content="Week 1 - Self-Portrait">
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/imageGallery.css">
     <title>Gordon Reid - Week 1 - Self-Portrait</title>
   </head>
   <body>
@@ -21,9 +22,31 @@
     <main>
       <h3>Week 1 - Self-Portrait</h3>
       <p>Shantel is challenging herself and I to a 52 week photography challenge. Each week we will take a certain type of picture and experiment with different settings on the camera and/or post-processing techniques.</p>
-      <p>The first week is self-portraits. I don't like taking pictures of myself so this wasn't the most fun one to start off with. We recently however received our Octopus Energy octopus plushie so I decided to take my picture with the pink and cuddly Constantine.</p><img class="blog-image" src="/images/blog/photography_challenge_week_1_before.jpg" alt="The unedited image of myself and Constantine">
-      <p>Above is the image without any editing. Nothing special when taking the picture but I did want to make use of my Adobe Photoshop Elements trial to test out the colour pop capabilities.</p><img class="blog-image" src="/images/blog/photography_challenge_week_1_after.jpg" alt="The edited image of myself and Constantine. Mostly black and white, only Constantine is in colour">
-      <p>Here is the final result. I quite like the effect, it really makes Constantine pop out.</p>
+      <p>The first week is self-portraits. I don't like taking pictures of myself so this wasn't the most fun one to start off with. We recently however received our Octopus Energy octopus plushie so I decided to take my picture with the pink and cuddly Constantine.</p>
+      <p>The first image is without any editing. Nothing special when taking the picture but I did want to make use of my Adobe Photoshop Elements trial to test out the colour pop capabilities.</p>
+      <p>The second image is the final result. I quite like the effect, it really makes Constantine pop out.</p>
+      <div id="image-gallery"><span id="fullscreen-button">⤡</span>
+        <div class="slide-container">
+          <div class="counter">1 / 2</div><img class="slide" src="/images/blog/photography_challenge_week_1_before.jpg" alt="The unedited image of myself and Constantine">
+          <p class="no-js-caption">The unedited image of myself and Constantine</p>
+        </div>
+        <div class="slide-container">
+          <div class="counter">2 / 2</div><img class="slide" src="/images/blog/photography_challenge_week_1_after.jpg" alt="The edited image of myself and Constantine. Mostly black and white, only Constantine is in colour">
+          <p class="no-js-caption">The edited image of myself and Constantine. Mostly black and white, only Constantine is in colour</p>
+        </div><a id="prev-button">&#10094;</a><a id="next-button">&#10095;</a>
+        <div id="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div id="exif-container">
+          <p id="exif"></p>
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/blog/photography_challenge_week_1_before_thumb.jpg" alt="The unedited image of myself and Constantine"></div>
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/blog/photography_challenge_week_1_after_thumb.jpg" alt="The edited image of myself and Constantine. Mostly black and white, only Constantine is in colour"></div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+      <script src="/js/imageGallery.js"></script>
     </main>
   </body>
 </html>

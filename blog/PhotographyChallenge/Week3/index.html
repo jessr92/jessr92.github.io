@@ -6,6 +6,7 @@
     <meta name="description" content="Week 3 - Your favourite colour">
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/imageGallery.css">
     <title>Gordon Reid - Week 3 - Your favourite colour</title>
   </head>
   <body>
@@ -22,7 +23,24 @@
       <h3>Week 3 - Your favourite colour</h3>
       <p>Week 3 of the photography challenge is "Your favourite colour". My favourite colour is blue. I was spoilt for choice when choosing a subject since we have lots of blue items.</p>
       <p>The subject I chose was our car - a 2nd generation Honda Jazz that Shantel named 'Gatsby'. We've had the car for just over a year and he's helped Shantel master the UK roads.</p>
-      <p>The photograph is shown below. Apart from erasing our number plate, I added lots of background blur to make the car stand out.</p><img class="blog-image" src="/images/blog/photography_challenge_week_3.jpg" alt="A picture of our Honda Jazz, Gatsby, with lots of background blur">
+      <p>The photograph is shown below. Apart from erasing our number plate, I added lots of background blur to make the car stand out.</p>
+      <div id="image-gallery"><span id="fullscreen-button">⤡</span>
+        <div class="slide-container">
+          <div class="counter">1 / 1</div><img class="slide" src="/images/blog/photography_challenge_week_3.jpg" alt="A picture of our Honda Jazz, Gatsby, with lots of background blur">
+          <p class="no-js-caption">A picture of our Honda Jazz, Gatsby, with lots of background blur</p>
+        </div><a id="prev-button">&#10094;</a><a id="next-button">&#10095;</a>
+        <div id="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div id="exif-container">
+          <p id="exif"></p>
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail-container"><img class="thumbnail" src="/images/blog/photography_challenge_week_3_thumb.jpg" alt="A picture of our Honda Jazz, Gatsby, with lots of background blur"></div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+      <script src="/js/imageGallery.js"></script>
     </main>
   </body>
 </html>
