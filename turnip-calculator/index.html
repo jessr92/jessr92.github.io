@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Animal Crossing New Horizons Turnip Price Calculator">
+    <meta name="apple-mobile-web-app-title" content="Jessica Reid">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png?v=20260330" sizes="96x96">
+    <link rel="shortcut icon" href="/favicon.ico?v=20260330">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20260330">
+    <link rel="manifest" href="/site.webmanifest?v=20260330">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/turnip-calculator.css">
+    <title>Jessica Reid - Animal Crossing New Horizons Turnip Price Calculator</title>
+  </head>
+  <body>
+    <header>Jessica Reid<img src="/images/progress_pride_flag.png" alt="Progress Pride Flag"></header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Coding</a></li>
+        <li><a href="/interests">Interests</a></li>
+        <li><a href="/turnip-calculator">ACNH Turnip Prices</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="turnip-calculator">
+        <h3>Turnip Price Calculator</h3>
+        <div class="info-box"><strong>How it works:</strong> Enter your Sunday buy price from Daisy Mae, then the selling prices you've seen each day (AM and PM).
+           The calculator uses the reverse-engineered game algorithm to determine which patterns are still possible and predict remaining prices.<br><br><strong>Price patterns in ACNH:</strong>
+          <ul>
+            <li><strong>Fluctuating:</strong> Prices alternate between high and decreasing phases throughout the week.</li>
+            <li><strong>Large Spike:</strong> Prices decrease then spike dramatically (up to 6× buy price) on one day.</li>
+            <li><strong>Decreasing:</strong> Prices steadily decrease from the buy price all week.</li>
+            <li><strong>Small Spike:</strong> Prices decrease, then have a moderate spike (up to 2× buy price), then decrease again.</li>
+          </ul>
+        </div>
+        <div class="input-section">
+          <h4>Enter this week's prices</h4>
+          <p class="hint-text">Leave a field blank if you haven't checked that time yet. Prices are in Bells.</p>
+          <label for="buy-price">Sunday Buy Price (from Daisy Mae):</label>
+          <input type="number" id="buy-price" min="90" max="110" placeholder="e.g. 100">
+          <div class="radio-group">
+            <label>Is this your first time buying turnips?</label>
+            <label class="radio-label" for="first-buy-yes">
+              <input type="radio" name="first-buy" id="first-buy-yes" value="yes"> Yes
+            </label>
+            <label class="radio-label" for="first-buy-no">
+              <input type="radio" name="first-buy" id="first-buy-no" value="no" checked="checked"> No
+            </label>
+          </div>
+          <div class="pattern-selector">
+            <label for="previous-pattern">Last week's pattern (if known):</label>
+            <select id="previous-pattern">
+              <option value="-1">Unknown</option>
+              <option value="0">Fluctuating</option>
+              <option value="1">Large Spike</option>
+              <option value="2">Decreasing</option>
+              <option value="3">Small Spike</option>
+            </select>
+          </div>
+          <div class="day-inputs">
+            <div class="day-group">
+              <h5>Monday</h5>
+              <label for="sell-2">AM:</label>
+              <input type="number" id="sell-2" min="0" max="9999" placeholder="?">
+              <label for="sell-3">PM:</label>
+              <input type="number" id="sell-3" min="0" max="9999" placeholder="?">
+            </div>
+            <div class="day-group">
+              <h5>Tuesday</h5>
+              <label for="sell-4">AM:</label>
+              <input type="number" id="sell-4" min="0" max="9999" placeholder="?">
+              <label for="sell-5">PM:</label>
+              <input type="number" id="sell-5" min="0" max="9999" placeholder="?">
+            </div>
+            <div class="day-group">
+              <h5>Wednesday</h5>
+              <label for="sell-6">AM:</label>
+              <input type="number" id="sell-6" min="0" max="9999" placeholder="?">
+              <label for="sell-7">PM:</label>
+              <input type="number" id="sell-7" min="0" max="9999" placeholder="?">
+            </div>
+            <div class="day-group">
+              <h5>Thursday</h5>
+              <label for="sell-8">AM:</label>
+              <input type="number" id="sell-8" min="0" max="9999" placeholder="?">
+              <label for="sell-9">PM:</label>
+              <input type="number" id="sell-9" min="0" max="9999" placeholder="?">
+            </div>
+            <div class="day-group">
+              <h5>Friday</h5>
+              <label for="sell-10">AM:</label>
+              <input type="number" id="sell-10" min="0" max="9999" placeholder="?">
+              <label for="sell-11">PM:</label>
+              <input type="number" id="sell-11" min="0" max="9999" placeholder="?">
+            </div>
+            <div class="day-group">
+              <h5>Saturday</h5>
+              <label for="sell-12">AM:</label>
+              <input type="number" id="sell-12" min="0" max="9999" placeholder="?">
+              <label for="sell-13">PM:</label>
+              <input type="number" id="sell-13" min="0" max="9999" placeholder="?">
+            </div>
+          </div>
+          <button class="btn" onclick="calculatePrices()">Calculate Prices</button>
+          <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+        </div>
+        <div class="results" id="results">
+          <h4>Price Graph</h4>
+          <div class="graph-container">
+            <canvas id="priceGraph" width="800" height="400"></canvas>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-color legend-min"></div><span>Minimum (all patterns)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color legend-max"></div><span>Maximum (all patterns)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color legend-exact"></div><span>Exact price</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color legend-buy"></div><span>Buy Price</span>
+              </div>
+            </div>
+          </div>
+          <h4>Possible Patterns</h4>
+          <div id="pattern-results"></div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/turnip-calculator.js"></script>
+  </body>
+</html>

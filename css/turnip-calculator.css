@@ -1,0 +1,311 @@
+.turnip-calculator h3 {
+    color: #2d5a27;
+    border-bottom: 3px solid #4a8c3f;
+    padding-bottom: 10px;
+}
+
+.turnip-calculator h4 {
+    color: #5a3e28;
+    margin-top: 25px;
+}
+
+.input-section {
+    background: #f5f0e8;
+    border: 2px solid #c4b69c;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.input-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #3d3d3d;
+}
+
+.input-section input[type="number"] {
+    width: 120px;
+    padding: 8px;
+    border: 2px solid #c4b69c;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-section input[type="number"]:focus {
+    border-color: #4a8c3f;
+    outline: none;
+}
+
+.radio-group {
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.radio-group label:first-child {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.radio-label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 4px;
+}
+
+.day-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.day-group {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 140px;
+    flex: 1;
+}
+
+.day-group h5 {
+    margin: 0 0 8px;
+    color: #2d5a27;
+    font-size: 14px;
+}
+
+.day-group label {
+    display: block;
+    font-size: 12px;
+    margin: 4px 0 2px;
+    font-weight: normal;
+}
+
+.day-group input {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.btn {
+    background: #4a8c3f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 15px 10px 15px 0;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #3a7a2f;
+}
+
+.btn-secondary {
+    background: #8b6914;
+}
+
+.btn-secondary:hover {
+    background: #6d5210;
+}
+
+.results {
+    background: #fff;
+    border: 2px solid #4a8c3f;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    display: none;
+}
+
+.results.visible {
+    display: block;
+}
+
+.pattern-match {
+    background: #e8f5e3;
+    border-left: 4px solid #4a8c3f;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.pattern-match.likely {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.pattern-match.possible {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.pattern-match.impossible {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.pattern-name {
+    font-weight: bold;
+    color: #2d5a27;
+    margin: 0 0 8px 0;
+}
+
+.probability-badge {
+    display: inline-block;
+    background: #4a8c3f;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.pattern-details {
+    margin-top: 8px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+.pattern-details p {
+    margin: 4px 0;
+}
+
+.graph-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.graph-container canvas {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.legend-min {
+    background: #4a8c3f;
+}
+
+.legend-max {
+    background: #dc3545;
+}
+
+.legend-exact {
+    background: #555;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.legend-buy {
+    background: #8b6914;
+}
+
+.hint-text {
+    font-size: 13px;
+    color: #666;
+}
+
+.info-box {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.pattern-selector {
+    margin: 15px 0;
+}
+
+.pattern-selector select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #c4b69c;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 6px 4px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.price-table th {
+    background: #4a8c3f;
+    color: white;
+    font-size: 12px;
+}
+
+.price-table td {
+    background: #f9f9f9;
+}
+
+.price-table .pattern-label {
+    font-weight: bold;
+    background: #e8f5e3 !important;
+}
+
+/* Price range color coding */
+.range0 { color: #28a745; font-weight: bold; }
+.range1 { color: #28a745; }
+.range2 { color: #333; }
+.range3 { color: #dc3545; }
+.range4 { color: #dc3545; font-weight: bold; }
+
+@media (max-width: 600px) {
+    .day-group {
+        min-width: 100%;
+    }
+    .price-table {
+        font-size: 11px;
+    }
+    .price-table th, .price-table td {
+        padding: 4px 2px;
+    }
+}
