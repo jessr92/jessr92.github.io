@@ -1007,4 +1007,10 @@ document.addEventListener('DOMContentLoaded', function () {
     inputs.forEach(input => {
         input.addEventListener('change', saveData);
     });
+
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+        input.addEventListener('wheel', function (e) {
+            e.preventDefault();
+        }, { passive: false });
+    });
 });
