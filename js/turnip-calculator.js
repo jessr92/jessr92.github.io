@@ -962,25 +962,6 @@ function drawGraph(results, buyPrice) {
     const legendX = margin.left + 10;
     const legendY = margin.top + 15;
     ctx.font = '11px sans-serif';
-
-    ctx.strokeStyle = '#4a8c3f';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(legendX, legendY);
-    ctx.lineTo(legendX + 20, legendY);
-    ctx.stroke();
-    ctx.fillStyle = '#333';
-    ctx.textAlign = 'left';
-    ctx.fillText('Minimum across all patterns', legendX + 25, legendY + 4);
-
-    ctx.strokeStyle = '#dc3545';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(legendX, legendY + 18);
-    ctx.lineTo(legendX + 20, legendY + 18);
-    ctx.stroke();
-    ctx.fillStyle = '#333';
-    ctx.fillText('Maximum across all patterns', legendX + 25, legendY + 22);
 }
 
 function resetForm() {
