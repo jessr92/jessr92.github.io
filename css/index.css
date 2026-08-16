@@ -6,12 +6,19 @@ body {
 header {
     background-color: #b73a7b;
     font-weight: 500;
-    font-size: 48px;
+    font-size: clamp(24px, 6vw + 12px, 48px);
     padding: 10px;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5em;
+}
+
+header img {
+    width: 1.5em;
+    height: auto;
+    flex-shrink: 0;
 }
 
 nav {
@@ -22,6 +29,9 @@ nav {
 nav ul {
     padding: 0;
     margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav li {
@@ -30,10 +40,17 @@ nav li {
 
 nav a {
     display: inline-block;
-    padding: 20px 10px;
+    padding: 14px 8px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    nav a {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
 }
 
 nav a:hover {
