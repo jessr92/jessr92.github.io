@@ -165,9 +165,7 @@ function appendExifToCaption(imageSrc, captionElement) {
     });
 }
 function initImageGallery() {
-    document.querySelectorAll(".gallery-slide").forEach(function (slide) {
-        const image = slide.querySelector("img.slide");
-        const caption = slide.querySelector(".gallery-caption");
+    function addImageCaption(image, caption) {
         if (!image || !caption) {
             return;
         }
@@ -176,6 +174,16 @@ function initImageGallery() {
             return;
         }
         appendExifToCaption(src, caption);
+    }
+    document.querySelectorAll(".gallery-slide").forEach(function (slide) {
+        const image = slide.querySelector("img.slide");
+        const caption = slide.querySelector(".gallery-caption");
+        addImageCaption(image, caption);
+    });
+    document.querySelectorAll(".gallery-lightbox").forEach(function (lightbox) {
+        const image = lightbox.querySelector(".lightbox-panel img.lightbox-img");
+        const caption = lightbox.querySelector(".lightbox-panel .lightbox-caption");
+        addImageCaption(image, caption);
     });
 }
 document.addEventListener("DOMContentLoaded", initImageGallery);
