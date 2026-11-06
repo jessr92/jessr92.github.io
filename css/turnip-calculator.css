@@ -1,10 +1,10 @@
-.turnip-calculator h3 {
+.turnip-calculator h1 {
     color: #2d5a27;
     border-bottom: 3px solid #4a8c3f;
     padding-bottom: 10px;
 }
 
-.turnip-calculator h4 {
+.turnip-calculator h2 {
     color: #5a3e28;
     margin-top: 25px;
 }
@@ -32,22 +32,25 @@
     font-size: 14px;
 }
 
-.input-section input[type="number"]:focus {
+.input-section input[type="number"]:focus-visible,
+.input-section select:focus-visible {
     border-color: #4a8c3f;
-    outline: none;
+    outline: 2px solid #4a8c3f;
+    outline-offset: 1px;
 }
 
-.radio-group {
+fieldset.radio-group {
     margin: 15px 0;
-    padding: 10px;
+    padding: 10px 14px;
     background: #fff;
     border-radius: 6px;
     border: 1px solid #ddd;
 }
 
-.radio-group label:first-child {
+fieldset.radio-group legend {
     font-weight: bold;
-    margin-bottom: 8px;
+    color: #3d3d3d;
+    padding: 0 4px;
 }
 
 .radio-label {
@@ -77,7 +80,7 @@
     flex: 1;
 }
 
-.day-group h5 {
+.day-group h3 {
     margin: 0 0 8px;
     color: #2d5a27;
     font-size: 14px;
@@ -98,8 +101,14 @@
     font-size: 13px;
 }
 
+.day-group input:focus-visible {
+    border-color: #4a8c3f;
+    outline: 2px solid #4a8c3f;
+    outline-offset: 1px;
+}
+
 .btn {
-    background: #4a8c3f;
+    background-color: #4a8c3f;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -107,19 +116,24 @@
     border-radius: 6px;
     cursor: pointer;
     margin: 15px 10px 15px 0;
-    transition: background 0.2s;
+    transition: background-color 0.2s ease;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #2d5a27;
+    outline-offset: 2px;
 }
 
 .btn:hover {
-    background: #3a7a2f;
+    background-color: #3a7a2f;
 }
 
 .btn-secondary {
-    background: #8b6914;
+    background-color: #8b6914;
 }
 
 .btn-secondary:hover {
-    background: #6d5210;
+    background-color: #6d5210;
 }
 
 .results {
@@ -267,6 +281,7 @@
     border-collapse: collapse;
     margin: 15px 0;
     font-size: 13px;
+    font-variant-numeric: tabular-nums;
 }
 
 .price-table th, .price-table td {

@@ -594,15 +594,25 @@ function getPriceClass(buyPrice, price) {
     }
     return "";
 }
+const percentFormatter = new Intl.NumberFormat("en-GB", {
+    style: "percent",
+    maximumFractionDigits: 2,
+});
+const exactPercentFormatter = new Intl.NumberFormat("en-GB", {
+    style: "percent",
+    maximumSignificantDigits: 3,
+});
 function displayPercentage(fraction) {
     if (!Number.isFinite(fraction))
         return "—";
-    const percent = fraction * 100;
-    if (percent >= 1)
-        return percent.toPrecision(3) + "%";
-    if (percent >= 0.01)
-        return percent.toFixed(2) + "%";
-    return "<0.01%";
+    if (fraction === 0)
+        return "0%";
+    if (fraction < 0.0001)
+        return "<0.01%";
+    if (fraction >= 0.01) {
+        return exactPercentFormatter.format(fraction);
+    }
+    return percentFormatter.format(fraction);
 }
 function getCurrentSlotIndex() {
     const now = new Date();
@@ -638,7 +648,9 @@ function calculatePrices() {
         <p class="pattern-name">No matching patterns found</p>
         <p>Double-check your prices. If you're sure they're correct, you may have encountered a rare edge case.</p>
       </div>`;
-        document.getElementById("price-table-container").innerHTML = "";
+        const tableContainer = document.getElementById("price-table-container");
+        if (tableContainer)
+            tableContainer.innerHTML = "";
         return;
     }
     resultsDiv.classList.add("visible");

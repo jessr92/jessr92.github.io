@@ -81,8 +81,9 @@
 }
 
 .lightbox-corner:hover,
-.lightbox-corner:focus {
+.lightbox-corner:focus-visible {
     color: var(--gallery-lightbox-button-colour);
+    outline: 2px solid var(--gallery-text);
 }
 
 .gallery-nav {
@@ -102,8 +103,9 @@
 }
 
 .gallery-nav:hover,
-.gallery-nav:focus {
+.gallery-nav:focus-visible {
     background-color: var(--gallery-nav-bg-hover);
+    outline: 2px solid var(--gallery-text);
 }
 
 .gallery-next {
@@ -140,12 +142,19 @@
     opacity: 0.6;
     max-height: 100px;
     max-width: 100px;
+    width: auto;
+    height: auto;
     display: block;
 }
 
 .thumbnail-link:hover .thumbnail,
-.thumbnail-link:focus .thumbnail {
+.thumbnail-link:focus-visible .thumbnail {
     opacity: 1;
+}
+
+.thumbnail-link:focus-visible {
+    outline: 2px solid var(--gallery-text);
+    outline-offset: 2px;
 }
 
 .lightbox-open {
@@ -159,10 +168,16 @@
     font: inherit;
 }
 
+.lightbox-open:focus-visible {
+    outline: 2px solid var(--gallery-text);
+    outline-offset: -2px;
+}
+
 .image-gallery .slide {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    height: auto;
     object-fit: contain; /* keeps full image visible */
 }
 
@@ -175,6 +190,7 @@
     margin: auto;
     background: transparent;
     box-sizing: border-box;
+    overscroll-behavior: contain;
 }
 
 .gallery-lightbox::backdrop {
@@ -202,8 +218,9 @@
 }
 
 .lightbox-close:hover,
-.lightbox-close:focus {
+.lightbox-close:focus-visible {
     color: var(--gallery-lightbox-button-colour);
+    outline: 2px solid var(--gallery-text);
 }
 
 .lightbox-img {

@@ -1,6 +1,29 @@
+html {
+    touch-action: manipulation;
+}
+
 body {
     font-family: system-ui, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: #ffffff;
+    color: #8b0000;
+    padding: 8px 16px;
+    z-index: 1000;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #8b0000;
+    border-radius: 4px;
+}
+
+.skip-link:focus-visible,
+.skip-link:focus {
+    top: 10px;
 }
 
 header {
@@ -58,6 +81,15 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
 main {
     margin: 25px auto;
     padding: 0 25px 0 25px;
@@ -66,6 +98,16 @@ main {
 
 main ul {
     margin: 5px 0;
+}
+
+main h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+main h2 {
+    font-size: 1.25em;
+    margin: 8px 0;
 }
 
 main h3 {
@@ -85,4 +127,5 @@ main li {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    height: auto;
 }

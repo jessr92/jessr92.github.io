@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="/css/imageGallery.generated.css">
     <title>Jessica Reid - Baking</title>
   </head>
-  <body>
-    <header>Jessica Reid<img src="/images/progress_pride_flag.png" alt="Progress Pride Flag"></header>
+  <body><a class="skip-link" href="#main">Skip to main content</a>
+    <header>Jessica Reid<img src="/images/progress_pride_flag.png" alt="Progress Pride Flag" width="36" height="24" fetchpriority="high"></header>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -24,8 +24,8 @@
         <li><a href="/interests">Interests</a></li>
       </ul>
     </nav>
-    <main>
-      <h3>Baking</h3>
+    <main id="main">
+      <h1>Baking</h1>
       <p>I like to bake. Content TBD</p>
       <p>Here are some of the things I have baked.</p>
       <section class="image-gallery" aria-label="Image gallery" style="--slide-count: 3">
@@ -36,47 +36,47 @@
           <div class="gallery-track">
             <div class="gallery-slide"><span class="counter">1 / 3</span>
               <button class="lightbox-corner" type="button" popovertarget="gallery-lightbox-0" title="View fullscreen" aria-label="View fullscreen">⤡</button>
-              <label class="gallery-nav gallery-prev" for="gallery-radio-2">&#10094;</label>
-              <label class="gallery-nav gallery-next" for="gallery-radio-1">&#10095;</label>
-              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-0" aria-label="View fullscreen: Cheesecake"><img class="slide" src="/images/cheesecake.jpg" alt="Cheesecake" loading="lazy"></button>
+              <label class="gallery-nav gallery-prev" for="gallery-radio-2" tabindex="0" role="button" aria-label="Previous slide">&#10094;</label>
+              <label class="gallery-nav gallery-next" for="gallery-radio-1" tabindex="0" role="button" aria-label="Next slide">&#10095;</label>
+              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-0" aria-label="View fullscreen: Cheesecake"><img class="slide" src="/images/cheesecake.jpg" alt="Cheesecake" loading="lazy" width="800" height="450"></button>
               <p class="gallery-caption">Cheesecake</p>
             </div>
             <div class="gallery-slide"><span class="counter">2 / 3</span>
               <button class="lightbox-corner" type="button" popovertarget="gallery-lightbox-1" title="View fullscreen" aria-label="View fullscreen">⤡</button>
-              <label class="gallery-nav gallery-prev" for="gallery-radio-0">&#10094;</label>
-              <label class="gallery-nav gallery-next" for="gallery-radio-2">&#10095;</label>
-              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-1" aria-label="View fullscreen: Chocolate Chip Cookies"><img class="slide" src="/images/cookies.jpg" alt="Chocolate Chip Cookies" loading="lazy"></button>
+              <label class="gallery-nav gallery-prev" for="gallery-radio-0" tabindex="0" role="button" aria-label="Previous slide">&#10094;</label>
+              <label class="gallery-nav gallery-next" for="gallery-radio-2" tabindex="0" role="button" aria-label="Next slide">&#10095;</label>
+              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-1" aria-label="View fullscreen: Chocolate Chip Cookies"><img class="slide" src="/images/cookies.jpg" alt="Chocolate Chip Cookies" loading="lazy" width="800" height="450"></button>
               <p class="gallery-caption">Chocolate Chip Cookies</p>
             </div>
             <div class="gallery-slide"><span class="counter">3 / 3</span>
               <button class="lightbox-corner" type="button" popovertarget="gallery-lightbox-2" title="View fullscreen" aria-label="View fullscreen">⤡</button>
-              <label class="gallery-nav gallery-prev" for="gallery-radio-1">&#10094;</label>
-              <label class="gallery-nav gallery-next" for="gallery-radio-0">&#10095;</label>
-              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-2" aria-label="View fullscreen: Chocolate and Raspberry Muffins"><img class="slide" src="/images/chocolate_raspberry_muffins.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy"></button>
+              <label class="gallery-nav gallery-prev" for="gallery-radio-1" tabindex="0" role="button" aria-label="Previous slide">&#10094;</label>
+              <label class="gallery-nav gallery-next" for="gallery-radio-0" tabindex="0" role="button" aria-label="Next slide">&#10095;</label>
+              <button class="lightbox-open" type="button" popovertarget="gallery-lightbox-2" aria-label="View fullscreen: Chocolate and Raspberry Muffins"><img class="slide" src="/images/chocolate_raspberry_muffins.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy" width="800" height="450"></button>
               <p class="gallery-caption">Chocolate and Raspberry Muffins</p>
             </div>
           </div>
         </div>
         <div class="gallery-thumbnails">
-          <label class="thumbnail-link" for="gallery-radio-0"><img class="thumbnail" src="/images/cheesecake_thumb.jpg" alt="Cheesecake" loading="lazy"></label>
-          <label class="thumbnail-link" for="gallery-radio-1"><img class="thumbnail" src="/images/cookies_thumb.jpg" alt="Chocolate Chip Cookies" loading="lazy"></label>
-          <label class="thumbnail-link" for="gallery-radio-2"><img class="thumbnail" src="/images/chocolate_raspberry_muffins_thumb.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy"></label>
+          <label class="thumbnail-link" for="gallery-radio-0" tabindex="0" role="button" aria-label="Go to slide 1: Cheesecake"><img class="thumbnail" src="/images/cheesecake_thumb.jpg" alt="Cheesecake" loading="lazy" width="100" height="100"></label>
+          <label class="thumbnail-link" for="gallery-radio-1" tabindex="0" role="button" aria-label="Go to slide 2: Chocolate Chip Cookies"><img class="thumbnail" src="/images/cookies_thumb.jpg" alt="Chocolate Chip Cookies" loading="lazy" width="100" height="100"></label>
+          <label class="thumbnail-link" for="gallery-radio-2" tabindex="0" role="button" aria-label="Go to slide 3: Chocolate and Raspberry Muffins"><img class="thumbnail" src="/images/chocolate_raspberry_muffins_thumb.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy" width="100" height="100"></label>
         </div>
         <div class="gallery-lightbox" id="gallery-lightbox-0" popover>
           <div class="lightbox-panel">
-            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-0" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/cheesecake.jpg" alt="Cheesecake" loading="lazy">
+            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-0" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/cheesecake.jpg" alt="Cheesecake" loading="lazy" width="1200" height="800">
             <p class="lightbox-caption">Cheesecake</p>
           </div>
         </div>
         <div class="gallery-lightbox" id="gallery-lightbox-1" popover>
           <div class="lightbox-panel">
-            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-1" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/cookies.jpg" alt="Chocolate Chip Cookies" loading="lazy">
+            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-1" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/cookies.jpg" alt="Chocolate Chip Cookies" loading="lazy" width="1200" height="800">
             <p class="lightbox-caption">Chocolate Chip Cookies</p>
           </div>
         </div>
         <div class="gallery-lightbox" id="gallery-lightbox-2" popover>
           <div class="lightbox-panel">
-            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-2" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/chocolate_raspberry_muffins.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy">
+            <button class="lightbox-close" type="button" popovertarget="gallery-lightbox-2" popovertargetaction="hide" aria-label="Close fullscreen">×</button><img class="lightbox-img" src="/images/chocolate_raspberry_muffins.jpg" alt="Chocolate and Raspberry Muffins" loading="lazy" width="1200" height="800">
             <p class="lightbox-caption">Chocolate and Raspberry Muffins</p>
           </div>
         </div>

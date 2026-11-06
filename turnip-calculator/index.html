@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/css/turnip-calculator.css">
     <title>Jessica Reid - Animal Crossing New Horizons Turnip Price Calculator</title>
   </head>
-  <body>
-    <header>Jessica Reid<img src="/images/progress_pride_flag.png" alt="Progress Pride Flag"></header>
+  <body><a class="skip-link" href="#main">Skip to main content</a>
+    <header>Jessica Reid<img src="/images/progress_pride_flag.png" alt="Progress Pride Flag" width="36" height="24" fetchpriority="high"></header>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -23,9 +23,9 @@
         <li><a href="/interests">Interests</a></li>
       </ul>
     </nav>
-    <main>
+    <main id="main">
       <div class="turnip-calculator">
-        <h3>Turnip Price Calculator</h3>
+        <h1>Turnip Price Calculator</h1>
         <div class="info-box"><strong>How it works:</strong> Enter your Sunday buy price from Daisy Mae, then the selling prices you've seen each day (AM and PM).
            The calculator uses the reverse-engineered game algorithm to determine which patterns are still possible and predict remaining prices.<br><br><strong>Price patterns in ACNH:</strong>
           <ul>
@@ -36,22 +36,22 @@
           </ul>
         </div>
         <div class="input-section">
-          <h4>Enter this week's prices</h4>
+          <h2>Enter this week's prices</h2>
           <p class="hint-text">Leave a field blank if you haven't checked that time yet. Prices are in Bells.</p>
           <label for="buy-price">Sunday Buy Price (from Daisy Mae):</label>
-          <input type="number" id="buy-price" min="90" max="110" placeholder="e.g. 100">
-          <div class="radio-group">
-            <label>Is this your first time buying turnips?</label>
+          <input type="number" id="buy-price" name="buyPrice" min="90" max="110" placeholder="e.g. 100…" autocomplete="off" inputmode="numeric">
+          <fieldset class="radio-group">
+            <legend>Is this your first time buying turnips?</legend>
             <label class="radio-label" for="first-buy-yes">
               <input type="radio" name="first-buy" id="first-buy-yes" value="yes"> Yes
             </label>
             <label class="radio-label" for="first-buy-no">
               <input type="radio" name="first-buy" id="first-buy-no" value="no" checked="checked"> No
             </label>
-          </div>
+          </fieldset>
           <div class="pattern-selector">
             <label for="previous-pattern">Last week's pattern (if known):</label>
-            <select id="previous-pattern">
+            <select id="previous-pattern" name="previousPattern">
               <option value="-1">Unknown</option>
               <option value="0">Fluctuating</option>
               <option value="1">Large Spike</option>
@@ -61,53 +61,53 @@
           </div>
           <div class="day-inputs">
             <div class="day-group">
-              <h5>Monday</h5>
+              <h3>Monday</h3>
               <label for="sell-2">AM:</label>
-              <input type="number" id="sell-2" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-2" name="sell-2" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-3">PM:</label>
-              <input type="number" id="sell-3" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-3" name="sell-3" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
             <div class="day-group">
-              <h5>Tuesday</h5>
+              <h3>Tuesday</h3>
               <label for="sell-4">AM:</label>
-              <input type="number" id="sell-4" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-4" name="sell-4" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-5">PM:</label>
-              <input type="number" id="sell-5" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-5" name="sell-5" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
             <div class="day-group">
-              <h5>Wednesday</h5>
+              <h3>Wednesday</h3>
               <label for="sell-6">AM:</label>
-              <input type="number" id="sell-6" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-6" name="sell-6" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-7">PM:</label>
-              <input type="number" id="sell-7" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-7" name="sell-7" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
             <div class="day-group">
-              <h5>Thursday</h5>
+              <h3>Thursday</h3>
               <label for="sell-8">AM:</label>
-              <input type="number" id="sell-8" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-8" name="sell-8" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-9">PM:</label>
-              <input type="number" id="sell-9" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-9" name="sell-9" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
             <div class="day-group">
-              <h5>Friday</h5>
+              <h3>Friday</h3>
               <label for="sell-10">AM:</label>
-              <input type="number" id="sell-10" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-10" name="sell-10" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-11">PM:</label>
-              <input type="number" id="sell-11" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-11" name="sell-11" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
             <div class="day-group">
-              <h5>Saturday</h5>
+              <h3>Saturday</h3>
               <label for="sell-12">AM:</label>
-              <input type="number" id="sell-12" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-12" name="sell-12" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
               <label for="sell-13">PM:</label>
-              <input type="number" id="sell-13" min="0" max="9999" placeholder="?">
+              <input type="number" id="sell-13" name="sell-13" min="0" max="9999" placeholder="e.g. 95…" autocomplete="off" inputmode="numeric">
             </div>
           </div>
           <button class="btn" onclick="calculatePrices()">Calculate Prices</button>
           <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
         </div>
-        <div class="results" id="results">
-          <h4>Price Graph</h4>
+        <div class="results" id="results" aria-live="polite">
+          <h2>Price Graph</h2>
           <div class="graph-container">
             <canvas id="priceGraph" width="758" height="380"></canvas>
             <div class="legend">
@@ -125,8 +125,8 @@
               </div>
             </div>
           </div>
-          <h4>Possible Patterns</h4>
-          <div id="pattern-results"></div>
+          <h2>Possible Patterns</h2>
+          <div id="pattern-results" aria-live="polite"></div>
         </div>
       </div>
     </main>

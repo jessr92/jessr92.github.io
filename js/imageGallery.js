@@ -185,5 +185,14 @@ function initImageGallery() {
         const caption = lightbox.querySelector(".lightbox-panel .lightbox-caption");
         addImageCaption(image, caption);
     });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            const target = e.target;
+            if (target && (target.classList.contains("gallery-nav") || target.classList.contains("thumbnail-link"))) {
+                e.preventDefault();
+                target.click();
+            }
+        }
+    });
 }
 document.addEventListener("DOMContentLoaded", initImageGallery);
